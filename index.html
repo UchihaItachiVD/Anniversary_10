@@ -1,69 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anniversary_10</title>
-</head>
-<style>
-  body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-content: center;
-      background: #e48be7;
-      filter: drop-shadow(0 0 10px #cc333f);
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary_10</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+            background: #e48be7;
+            filter: drop-shadow(0 0 10px #cc333f);
+            text-align: center; /* Center text */
+        }
 
-  img {
-      --s: 300px; /* image size */
-      width: var(--s);
-      aspect-ratio: 1;
-      padding: calc(.09*var(--s)) calc(var(--s)/2 - var(--_p));
-      box-sizing: border-box;
-      object-fit: cover;
-      border-image: 
-          radial-gradient(#e5414e 69%, #0000 70%) 
-          84.5%/calc(var(--s)/2)/0 var(--_p);
-      clip-path: polygon(
-          calc(-41% - var(--_p)) 0,
-          calc(50%  - var(--_p)) 91%,
-          calc(50%  + var(--_p)) 91%,
-          calc(141% + var(--_p)) 0);
-      transition: .5s;
-      cursor: pointer;
-      --_p: 0px;
-  }
+        .container {
+            display: inline-block;
+            position: relative;
+        }
 
-  img:hover {
-      --_p: calc(var(--s)/2);
-      transform: rotate(0deg); /* Reset the rotation on hover */
-  }
+        img {
+            --s: 300px; /* image size */
+            width: var(--s);
+            aspect-ratio: 1;
+            padding: calc(.09 * var(--s)) calc(var(--s)/2 - var(--_p));
+            box-sizing: border-box;
+            object-fit: cover;
+            border-image:
+                radial-gradient(#e5414e 69%, #0000 70%)
+                84.5%/calc(var(--s)/2)/0 var(--_p);
+            clip-path: polygon(
+                calc(-41% - var(--_p)) 0,
+                calc(50% - var(--_p)) 91%,
+                calc(50% + var(--_p)) 91%,
+                calc(141% + var(--_p)) 0);
+            transition: .5s;
+            cursor: pointer;
+            --_p: 0px;
+        }
 
-  h1 {
-      visibility: visible;
-  }
+        img:hover {
+            --_p: calc(var(--s)/2);
+            transform: rotate(0deg); /* Reset the rotation on hover */
+        }
 
-  img:hover ~ h1 {
-      visibility: hidden;
-  }
+        h1,
+        h2,
+        p {
+            visibility: hidden;
+            color: white; /* Set text color to white */
+            line-height: 2rem;
+            font-style: italic;
+            font-family: cursive;
+        }
 
-  h2 {
-      visibility: hidden;
-  }
+        .container:hover h1,
+        .container:hover h2,
+        .container:hover p {
+            visibility: visible;
+        }
 
-  img:hover ~ h2 {
-      visibility: visible;
-  }
+        h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            bottom: 30%;
+            transform: translate(-50%, -50%);
+            color: white; /* Set text color to white */
+            z-index: 1;
+            font-style: oblique;
+        }
 
-
-</style>
+        .container:hover h3 {
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 <body>
-<h1>Happy Anniversary Baby ❤</h1>
-<img src="image.jpg" alt="my girl">
-<h2>I Love You Sooooooooo Much 😘</h2>
-
+    <div class="container">
+        <h3>HOVER/CLICK ON HEART</h3>
+        <h1 style="color: rgb(75, 10, 10);">Happy Anniversary Baby ❤</h1>
+        <p>Celebrating our 10-month anniversary today feels like a journey filled with laughter, growth, and unwavering love. Each passing moment has deepened our emotional connection, creating a tapestry of shared memories that we hold close to our hearts. As we reflect on the beautiful journey together, the romance continues to bloom, weaving a story of commitment and affection.</p>
+        <img  src="image.jpg" alt="my girl">
+        <p>Every day spent with you is a testament to the strength of our bond, and with each passing month, our love becomes even more profound. Here's to the countless moments that make our journey special, and to many more months of cherishing the magic we've created together. Happy 10 months, my love! 💖✨</p>
+        <h2 style="color: rgb(75, 10, 10);">I Love You Sooooooooo Much 😘</h2>
+    </div>
 </body>
+
 </html>
